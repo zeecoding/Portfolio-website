@@ -4,6 +4,7 @@ import { useState ,useEffect} from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Field, Label, Switch } from '@headlessui/react'
 import { fetchCountryNames } from '../constants/Countries'
+import { motion } from 'framer-motion'
 export default function Example() {
   const [agreed, setAgreed] = useState(false)
   const [countryNames, setCountryNames] = useState([]);
@@ -47,12 +48,25 @@ export default function Example() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Get in Touch</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
-        </p>
+        <motion.h2 
+          whileInView={{y: 0,opacity: 1}}
+          initial={{y: -100 , opacity: 0}}
+          transition={{duration: 0.7}}
+          className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Get in Touch</motion.h2>
+        <motion.p 
+          whileInView={{y: 0,opacity: 1}}
+          initial={{y: 100 , opacity: 0}}
+          transition={{duration: 0.7}}
+          className="mt-2 text-lg leading-8 text-gray-600">
+          Let's Convert your ideas in to Reality
+        </motion.p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <motion.form action="#" method="POST" 
+        whileInView={{opacity: 1, x:0}}
+        initial={{x: -150 , opacity: 0}}
+        transition={{duration: 0.75 ,ease:'easeInOut'}}
+        className="mx-auto mt-10 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-neutral-200">
@@ -122,7 +136,7 @@ export default function Example() {
                 <select
                   id="country"
                   name="country"
-                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-2 pr-4 text-gray-900 focus:ring-2 focus:ring-inset focus:ring-neutral-200 sm:text-sm"
+                  className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-3 pr-4 text-gray-900 focus:ring-2 focus:ring-inset focus:ring-neutral-200 sm:text-sm"
                 >
                    {countryNames.map((country, index) => (
                       <option key={index} value={country.code}>
@@ -189,7 +203,7 @@ export default function Example() {
             Let's talk
           </button>
         </div>
-      </form>
+      </motion.form>
     </div>
   )
 }
