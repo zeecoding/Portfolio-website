@@ -1,0 +1,30 @@
+.typewriter{
+    color: #fff;
+    font-family: Inter;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */ /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    line-height: 1.2;
+    animation: 
+      typing 3s steps(40, end),
+      blink-caret 0.5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  .image-container img{
+    width: 100%; /* Ensure image fits the container */
+    height: auto; /* Maintain aspect ratio */
+    mask: url('../assets/blob.svg');
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  
+  
+  

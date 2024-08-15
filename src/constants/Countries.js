@@ -13,7 +13,6 @@ export const fetchCountryNames = async () => {
         name: country.name.common, // Country name
         code: country.cca3, // ISO Alpha-3 country code
         callingCode: country.idd.root + suffix,
-        flag: country.flags.svg
       };
     });
     formattedCountries.sort((a, b) => a.name.localeCompare(b.name));

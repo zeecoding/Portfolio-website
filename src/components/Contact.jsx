@@ -139,7 +139,7 @@ export default function Example() {
                   className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-3 pr-4 text-gray-900 focus:ring-2 focus:ring-inset focus:ring-neutral-200 sm:text-sm"
                 >
                    {countryNames.map((country, index) => (
-                      <option key={index} value={country.code}>
+                      <option key={index} >
                         {country.callingCode} {country.code}
                       </option>
                     ))}
@@ -154,7 +154,7 @@ export default function Example() {
                 name="phone-number"
                 type="tel"
                 autoComplete="tel"
-                className="block w-full rounded-md border-0 px-4 py-2 pl-28 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-neutral-300 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 px-5 py-2 pl-28 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-neutral-300 sm:text-sm sm:leading-6"
               />
             </div>
           </div>

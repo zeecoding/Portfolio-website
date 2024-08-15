@@ -5,6 +5,7 @@ import About from './components/About'
 import Experience from './components/Experience'
 import Project from './components/Project'
 import Contact from './components/Contact'
+
 const App = () => {
   return (
     <div className="overflow-x-hidden text-neutral-200 antialised selection:bg-neutral-300 selection:text-indigo-700">
