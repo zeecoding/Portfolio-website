@@ -26,7 +26,7 @@ const Hero = () => {
                 variants={container(0.25)}
                 initial="hidden"
                 animate="visible"
-                className=" typewriter pb-16 text-4xl font-normal tracking-tight lg:mt-16 lg:text-6xl flex items-center"
+                className="typewriter pb-16 text-4xl font-normal tracking-tight lg:mt-16 lg:text-6xl flex items-center"
               >
                 <motion.span 
                     animate={{ rotate: [0, 20 , 0] }} // Rotates from 0° to 20° and back to 0°
@@ -35,7 +35,7 @@ const Hero = () => {
                     className="text-yellow-400 text-4xl mr-2">
                   <PiHandWavingFill />
                 </motion.span>
-                Hi, I am Kevin Rush
+                Hi,I'm Kevin Rush
               </motion.h1>
             </div>
             <motion.span
@@ -63,7 +63,7 @@ const Hero = () => {
               animate={{ x: 0, opacity: 1, delay: 1.25 }}
               transition={{ ease: "easeInOut", duration: 1 }}
               whileHover={{ scale: 1.1, rotate: 1 }}
-              src={profilePic}
+              src={profilePic} 
               alt=""
             />
           </div>
